@@ -94,6 +94,30 @@ class Welcome extends CI_Controller {
 		
 	}
 
+	public function upload() {
+		$nama = $_POST['nama'];
+		$foto = $_FILES['foto'];
+
+		$target_dir = "public/";
+		$target_file = $target_dir . basename($_FILES["foto"]["name"]);
+		move_uploaded_file($_FILES["foto"]["name"], $target_file);
+		echo "The file ". basename( $_FILES["foto"]["name"]). " has been uploaded.";
+
+		$upload = array('nama_bank' => $nama, 'foto' => $_FILES["foto"]["name"]);
+		$this->db->insert('bank', $upload);
+		
+	}
+
+	public function delete() {
+
+		$id = $_POST['id'];
+		
+		$this->db->where('id', $id);
+		$this->db->delete('bank');
+	
+	}
+
+
 	public function generateRandomString($length = 64) {
 		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		$charactersLength = strlen($characters);
