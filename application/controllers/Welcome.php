@@ -72,6 +72,7 @@ class Welcome extends CI_Controller {
 		echo "</pre>";
 	}
 
+
 	public function edit(){
 		$id = $_POST['id_bank'];
 		$nama = $_POST['nama'];
@@ -117,7 +118,8 @@ class Welcome extends CI_Controller {
 	
 	}
 
-
+	
+	// method untuk generate random string buat token
 	public function generateRandomString($length = 64) {
 		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		$charactersLength = strlen($characters);
