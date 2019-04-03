@@ -37,7 +37,6 @@ class Welcome extends CI_Controller {
 		$this->db->where('id', $id);
 		$this->db->update('bank', $data_edit);
 
-
 		/* ini untuk show data */
 		//nampilkan semuanya
 		// $this->load->model('model_crud');
@@ -118,7 +117,7 @@ class Welcome extends CI_Controller {
 	
 	}
 
-	
+
 	// method untuk generate random string buat token
 	public function generateRandomString($length = 64) {
 		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';

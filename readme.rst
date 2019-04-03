@@ -18,4 +18,11 @@
 //step keempat
     atur autoload library yang berada di folder application -> config -> autoload.php
     $autoload['libraries'] = array('database');
-    
+
+//step kelima
+    nanti configurasi untuk CRUD ada di welcome.php foldernya di application -> contollers -> welcome.php
+
+    bisa juga sih edit2nya itu pake base template yang ada di Model_crud.php.. contohnya kalo disitu buat get data.. tapi di welcome.php saya komen
+
+
+more info buat belajar hubungi : https://wa.me/628986688226 terimakasih :v eheheh
